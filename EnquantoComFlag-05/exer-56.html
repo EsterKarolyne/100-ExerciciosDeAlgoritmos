@@ -1,0 +1,33 @@
+<!-- 56 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somatório</title>
+</head>
+
+<body>
+    <script>
+        var soma = 0;
+
+        document.body.addEventListener('keypress', function (event) {
+            const key = event.key;
+            
+            soma = soma + Number(key);
+            console.log(key)
+            if (key == 0) {
+                console.log('acabou');
+                return " ";
+            }
+            console.log(`A soma é ${soma}`);
+            
+                
+        });
+
+    </script>
+</body>
+
+</html>

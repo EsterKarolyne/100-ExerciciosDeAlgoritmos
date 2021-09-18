@@ -1,0 +1,70 @@
+<!-- 57 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Salario e Sexo</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+    <script>
+
+        var genero = ['M','F'];
+        var num_funcionarios = 0;
+        var total_homem = [];
+        var total_mulher = [];
+        var mulheres = [];
+        var homens = [];
+        var all = [];
+        var salarios = [];
+        do{
+            var pessoas = genero[Math.floor((Math.random() * genero.length))];
+            var salario = Math.floor(Math.random() * 500 + 1);
+            all.push(pessoas);
+            salarios.push(salario);
+            if(pessoas == 'M'){
+                mulheres.push(pessoas);
+                total_mulher.push(salario);
+
+
+            }
+            if(pessoas == 'F' ){
+                homens.push(pessoas);
+                total_homem.push(salario);
+            }
+
+
+            num_funcionarios++
+        }while(num_funcionarios < 10);
+
+        var soma_homem = total_homem.reduce((t, n) => n+t, 0);
+        var soma_mulher = total_mulher.reduce((t, n) => n+t, 0);
+        console.log(all);
+        console.log(salarios);
+        console.log("A soma dos salarios da mulheres é: " + soma_mulher);
+        console.log("A soma dos salarios dos homens é: " + soma_homem);
+
+
+    
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexo e Peso</title>
+</head>
+<body>
+    
+
+
+    <script>
+        var opcoes = ['M','F']
+        var sexo = []
+        var pesos = []
+        var mulheresPesos = []
+        var homens100 = []
+        var maiorPesoHomens = []
+        var mulheresCadastradas = []
+
+        for(count = 0; count < 8; count++){
+            var valoresPesos = Math.floor(Math.random() * 120 + 1)
+            var genero = opcoes[Math.floor((Math.random() * opcoes.length))];
+
+            sexo.push(genero)
+            pesos.push(valoresPesos)
+            mulheresPesos.push(valoresPesos)
+            maiorPesoHomens.push(valoresPesos)
+
+            if(genero == 'M' && valoresPesos > 100){
+                homens100.push(valoresPesos)
+                
+
+            }
+            if(genero == 'F'){
+                mulheresCadastradas.push(genero)
+            }
+
+
+
+        }
+        
+        var media = mulheresPesos.reduce((t, n) => n+t, 0)/mulheresPesos.length
+        var max = Math.max(...maiorPesoHomens)
+        console.log(pesos)
+        console.log(sexo)
+        console.log("A quantidade de mulheres que foram cadastradas são: " + mulheresCadastradas.length )
+        console.log("Os homens que pesam mais de 100kg: " + homens100)
+        console.log("A media do peso entre as mulheres: " + media)
+        console.log("O maior peso entre os homens: " + max)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- 51 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço dos produtos</title>
+</head>
+<body>
+    
+
+
+<script>
+
+
+cont = 0
+var valor = 0
+ 
+window.onkeypress = produtos
+var p = []
+function produtos(){
+var key = event.key
+
+while(cont < 8){
+    produto = Math.floor(Math.random() * 100 + 1)
+    p.push(produto)
+    cont++
+}    
+var min = Math.min(...p)
+var max = Math.max(...p)
+console.log(p)
+console.log(min)
+console.log(max)
+}
+
+
+
+
+</script>    
+</body>
+</html>

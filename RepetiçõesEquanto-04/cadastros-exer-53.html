@@ -1,0 +1,75 @@
+<!-- 53 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros</title>
+</head>
+<body>
+    
+
+    <script>
+        var all = []
+        var pessoas = ['Homem', 'Mulher']
+        var mediahomem = []
+        var mulher20 = []
+        var idadehomem = []
+        var idadem = []
+        var todasidades = []
+        var mulheres = []
+        var homens = []
+        
+
+        window.onkeypress = cadastro
+
+        function cadastro(){
+            var count = 0
+            while(count < 5){
+               var pessoa = pessoas[Math.floor((Math.random() * pessoas.length))]
+               var idade = Math.floor(Math.random() * 25 + 1)
+
+                all.push(pessoa)
+                todasidades.push(idade)
+                
+                if(pessoa == 'Homem'){
+                    homens.push(pessoa)
+                    idadehomem.push(idade)
+
+                } if(pessoa == 'Mulher'){
+                    mulheres.push(pessoa)
+                    if(idade > 20){
+                        mulher20.push(idade)
+                    }
+                    
+                }
+                count++
+            }
+
+
+
+            mediahomem = idadehomem.reduce((t, n) => n+t, 0)/idadehomem.length
+
+            console.log(all)
+            console.log(todasidades)
+            console.log("Temos:"+" "+ mulheres.length+ " " + "mulheres e" + " " + homens.length + " " + "homens")
+            console.log("A média de todas as idades é: " + todasidades.reduce((t, n) => n+t, 0)/todasidades.length)
+            console.log("A média da idade dos homens: " + mediahomem)
+            console.log("A idade dos homens: " + idadehomem)
+            console.log("As mulher com mais de 20 anos são: " + mulher20)
+
+            
+
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

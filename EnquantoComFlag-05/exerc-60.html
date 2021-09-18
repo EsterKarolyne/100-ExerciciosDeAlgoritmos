@@ -1,0 +1,70 @@
+<!-- 60 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velhos e novos</title>
+</head>
+<body>
+    <!-- 60) Desenvolva um algoritmo que leia o nome, a idade e o sexo de várias pessoas.
+O programa vai perguntar se o usuário quer ou não continuar. No final, mostre:
+a) O nome da pessoa mais velha
+b) O nome da mulher mais jovem
+c) A média de idade do grupo
+d) Quantos homens tem mais de 30 anos
+e) Quantas mulheres tem menos de 18 anos
+     -->
+
+
+     <script>
+         var count = 0
+         var sexo = ['M', 'F']
+         var maisvelha = []
+         var maisjovem = []
+         var homens30 = []
+         var mulheres18 = []
+         var idades = []
+         var pessoas = []
+         var mulheres = []
+
+         do{
+            var genero = sexo[Math.floor((Math.random() * sexo.length))];
+            var idade = Math.floor(Math.random() * 80 + 1);
+            idades.push(idade)
+            pessoas.push(genero)
+            mulheres.push(idade)
+
+            
+            if(genero == 'M' && idade > 30){  
+                homens30.push(idade)
+
+
+
+            }
+            if(genero == 'F' && idade < 18 ){
+                mulheres18.push(idade)
+
+            }
+            count++
+         } while(count < 10)
+
+         var max = Math.max(...idades)
+         var min = Math.min(...mulheres)
+         var media = idades.reduce((t, n) => n+t, 0)/idades.length
+         console.log(idades)
+         console.log(pessoas)
+         console.log("a pessoa mais velha: " + max )
+         console.log("a mulher mais jovem: " + min )
+         console.log("a media das idades: " + media)
+         console.log("homens com mais de 30 anos: " + homens30 )
+         console.log("quantas mulheres tem menos 18 anos: " + mulheres18)
+         
+
+
+
+     </script>
+</body>
+</html>

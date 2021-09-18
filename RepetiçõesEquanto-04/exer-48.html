@@ -1,0 +1,36 @@
+<!-- 48 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+var soma = 0
+var i = 0
+document.body.addEventListener('keypress', function (event) {
+const key = event.key;
+
+if (i < 7){
+    soma = soma + Number(key)
+    i = i + 1
+    console.log(key)
+} else if(i==7){
+    console.log(`A soma é ${soma}`)
+} 
+else{ 
+    console.log('passou de 7')
+    
+}
+    
+});
+
+</script>
+</html>

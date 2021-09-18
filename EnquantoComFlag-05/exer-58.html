@@ -1,0 +1,33 @@
+<!-- 58 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idade de varios alunos</title>
+</head>
+
+<body>
+
+
+    <script>
+        var idade = []
+        document.body.addEventListener('keypress', function (event) {
+                    var tecla = event.key
+                    if (tecla == 9) {
+                        console.log('acabou!')
+                        return " "
+
+                    } else {
+                        idade.push(tecla)
+                    }
+                    console.log(idade)
+
+
+                })
+    </script>
+</body>
+
+</html>

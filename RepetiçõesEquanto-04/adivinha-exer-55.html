@@ -1,0 +1,39 @@
+<!-- 55 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advinha?!</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+document.write('Estou pensando em um número de 1 a 10, qual é?')
+
+window.onkeypress = teclaPressionada 
+var count = 0
+function teclaPressionada(){
+    if(count < 4){
+        PensamentoCPU = Math.floor(Math.random() * (10)) + 1 // pc pensa num numero de 1 a 10
+        if(event.key == PensamentoCPU ){
+            console.log(`Você acertou! Eu estava pensando no número ${PensamentoCPU}`)
+
+        } else if(event.key != PensamentoCPU){
+            console.log('Não era esse que eu estava pensando, tente de novo!')
+
+        }
+
+    }else{
+        window.alert("Suas tentativas acabaram")
+    }
+    count++
+}
+
+</script>
+</html>

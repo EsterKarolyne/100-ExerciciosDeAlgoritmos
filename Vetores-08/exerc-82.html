@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var nota = [9, 3, 4, 7, 6, 8, 2, 0, 1, 8]
+        var media = nota.reduce((t, n) => n + t, 0) / nota.length
+        var notaMedia = []
+        var max = Math.max(...nota)
+        
+
+
+
+        nota.forEach(function (item, indice) {
+            if (item > media) {
+                notaMedia.push(item)
+                
+            }
+
+              if(item == max){
+                  console.log("a maior nota é: " + item + " e usa posição é: " + indice)
+              }
+            
+        })
+        console.log("Pessoas com nota acima da media: " + notaMedia.length)
+        console.log("A média das notas é: " + media)
+
+
+
+
+    </script>
+</body>
+</html>

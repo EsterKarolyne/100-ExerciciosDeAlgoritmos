@@ -1,0 +1,71 @@
+<!-- 31 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoKenPo!</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    var pontosmaq = 0
+    var pontosusu = 0
+    const OPCAO = ["", "Pedra", "Papel","Tesoura"] // array para as opções de jogada, primeiro item vazio apenas pra ficar igual aos espaços do *escolha sua jogada*
+
+    document.write("Escolha sua jogada: <br>1-Pedra <br>2-Papel <br>3-Tesoura")
+
+    window.onkeypress = teclaPressionada // chamando a função    
+         
+    function teclaPressionada() { 
+    if(event.key == 1 || event.key == 2 || event.key == 3){ // verifica se a jogada é valida
+        jogadaCPU = Math.floor(Math.random() * (3)) + 1 // computador joga um numero aleatorio entre 1 e 3
+        if((event.key == 1 && jogadaCPU == 3) || (event.Key == 2 && JogadaCPU == 1) || (event.key == 3 && jogadaCPU ==2)){
+                pontosusu = pontosusu+1
+                console.log("VOCÊ GANHOU! Continue jogando")
+                console.log("Sua jogada:" + OPCAO[parseInt(event.key)])
+                console.log("Jogada da CPU:" + OPCAO[jogadaCPU])
+                console.log("Sua pontuação:" + pontosusu)
+                console.log("Pontuação da CPU:" + pontosmaq )
+                console.log("--------------------------------------")
+
+        }else if(event.key == jogadaCPU){
+                pontosusu = pontosusu+1
+                pontosmaq = pontosmaq+1
+                console.log("EMPATE! Os dois recebem pontos")
+                console.log("Sua jogada:" + OPCAO[parseInt(event.key)])
+                console.log("Jogada da CPU:" + OPCAO[jogadaCPU])
+                console.log("Sua pontuação:" + pontosusu)
+                console.log("Pontuação da CPU:" + pontosmaq)
+                console.log("--------------------------------------")
+
+        }else{
+            pontosmaq = pontosmaq+1
+            console.log("VOCÊ PERDEU!")
+            console.log("Sua jogada:" + OPCAO[parseInt(event.key)])
+            console.log("Jogada da CPU:" + OPCAO[jogadaCPU])
+            console.log("Sua pontuação:"  + pontosusu)
+            console.log("Pontuação da CPU:" + pontosmaq)
+            console.log("------------------------------------")
+        }
+
+    }else{
+        window.alert('Escolha entre os números 1, 2 ou 3')
+    }
+}
+
+
+/* event.key é o caractere da tecla pressionada, ela nao retorna um numero então é preciso trasforma-la em numero */
+</script>
+
+</html>
+
+
+
+            

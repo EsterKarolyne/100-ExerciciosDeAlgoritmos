@@ -1,0 +1,46 @@
+<!-- 49 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+var counter = 0 // apertar o botão apenas 6 vezes
+var impares = []
+var pares = []
+
+document.body.addEventListener('keypress', function (event) {
+var key = event.key;
+
+if(counter < 6){
+    console.log(key)
+    if(key % 2 == 0){
+        pares.push(key)
+        
+    }else{
+        impares.push(key)
+
+    }
+    counter++
+
+
+}else{
+    console.log(`Os numeros pares são ${pares} e os impares ${impares}`)
+    console.log('Escolha apenas 6 numeros')
+}
+
+    
+});
+
+
+</script>  
+</body>
+</html>

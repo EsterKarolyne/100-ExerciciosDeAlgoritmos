@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var idade = [44, 52, 90, 80, 17, 22, 15, 12]
+        var media = idade.reduce((t, n) => n + t, 0) / idade.length
+        var max = Math.max(...idade)
+
+
+
+        idade.forEach(function (item, indice) {
+            if (item > 25) {
+                console.log("Pessoas com mais de 25 anos: " + item + " | Posição:" + indice)
+            }
+
+              if(item == max){
+                  console.log("a maior idade é: " + item + " e usa posição é: " + indice)
+              }
+            
+        })
+        
+        console.log("A média das idade é: " + media)
+    </script>
+</body>
+
+</html>

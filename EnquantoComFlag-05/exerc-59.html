@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sexo e idade</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        var count = 0
+        var sexo = ['M', 'F']
+        var pessoas = []
+        var idades = []
+        var maioridade
+        var totalhomens = []
+        var mulherjovem = []
+        var mediahomem = []
+
+        do{
+            var genero = sexo[Math.floor((Math.random() * sexo.length))];
+            var idade = Math.floor(Math.random() * 80 + 1);
+            idades.push(idade)
+            pessoas.push(genero)
+            if(genero == 'F'){
+
+                mulherjovem.push(idade)
+                
+
+            }
+            if(genero == 'M'){
+                mediahomem.push(idade)
+                totalhomens.push(genero)
+
+            }
+
+
+            count++
+        }while(count < 10);
+
+        var max = Math.max(...idades)
+        var min = Math.min(...mulherjovem)
+        var media = mediahomem.reduce((t, n) => n+t, 0)/mediahomem.length
+        console.log(idades)
+        console.log(pessoas)
+        console.log("Maior idade:" + max )
+        console.log("homens cadastrados:" + totalhomens.length)
+        console.log("a mulher mais jovem:" + min )
+        console.log("media de idade dos homens: " + media)
+
+
+
+    </script>
+</body>
+</html>

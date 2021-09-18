@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso</title>
+</head>
+<body>
+    <script>
+        var pesoealtura = []
+        var peso = []
+        var altura = []
+        var peso90 = []
+        var pesoealtura2 = []
+
+        window.onkeypress = Tecla
+        
+        function Tecla(){
+            var count = 0
+            while(count < 7){
+                var h = (Math.random() * 2  + 1)
+                var p = Math.floor(Math.random() * (105 + 1)-1)
+                
+                 peso.push(p)
+                 altura.push(h)
+
+                if(p > 90){
+                    peso90.push(p)
+
+                }if(p < 50 && h < 1.60){
+                    pesoealtura.push(p)
+                    pesoealtura.push(h)
+                    
+
+
+                }if(p > 100 && h > 1.90){
+                    pesoealtura2.push(p)
+                    pesoealtura2.push(h)
+
+
+                }
+                count++
+            }
+           
+            var mediaaltura = altura.reduce((t, n) => n+t, 0)/altura.length
+            console.log("A altura da pessoas é: " + altura)
+            console.log("O peso das pessoas: " + peso)
+            console.log("A média da alturas é: " + mediaaltura)
+            console.log("As pessoas que pesam mais de 90kg: " + peso90)
+            console.log("Pessoas com menos de 50kg e menos de 1,60 de altura: " + pesoealtura)
+            console.log("Pessoas com mais de 100kg e mais de 1,90 de altura: " + pesoealtura2)
+            
+        }
+    
+
+
+
+
+    </script>
+</body>
+</html>

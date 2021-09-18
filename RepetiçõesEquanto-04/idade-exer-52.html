@@ -1,0 +1,53 @@
+<!-- 52 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDADE</title>
+</head>
+<body>
+    
+
+<script>
+    var all = []
+    var maior18 = []
+    var menor5 = []
+    var media
+    var max
+
+    window.onkeypress = idade
+
+    function idade(){
+        count = 0
+        while(count < 20 ){
+            etaria = Math.floor(Math.random() * 20 + 1)
+            all.push(etaria)
+
+            if(etaria > 18 ){
+                maior18.push(etaria)
+
+            }
+            if(etaria < 5){
+                menor5.push(etaria)
+
+            }
+            count++
+        }
+        
+        media = all.reduce((t, n) => n+t, 0)/all.length
+        max = Math.max(...all)
+        console.log(all)
+        console.log("Os maiores de 18 são: " + maior18)
+        console.log("Os menores que 5 são : " + menor5)
+        console.log("A maior idade é: " + max)
+        console.log("A média é:" + media)
+
+        }
+        
+
+
+</script>
+</body>
+</html>

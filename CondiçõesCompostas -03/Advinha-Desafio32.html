@@ -1,0 +1,41 @@
+<!-- 32 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advinha?!</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //var numero = 0
+    //const opcao = [1,2,3,4,5]
+
+    document.write('Estou pensando em um número de 1 a 5, qual é?')
+
+    window.onkeypress = teclaPressionada 
+
+    function teclaPressionada(){
+        if(event.key == 1 || event.key == 2 || event.key == 3 || event.key == 4 || event.key == 5){
+            PensamentoCPU = Math.floor(Math.random() * (5)) + 1 // pc pensa num numero de 1 a 5
+            if(event.key == PensamentoCPU ){
+                console.log(`Você acertou! Eu estava pensando no número ${PensamentoCPU}`)
+
+            } else if(event.key != PensamentoCPU){
+                console.log('Não era esse que eu estava pensando, tente de novo!')
+
+            }
+
+        } else{
+            window.alert("Escolha um númemro entre 1 e 5")
+        }
+    }
+
+
+</script>
+</html>
